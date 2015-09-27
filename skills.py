@@ -115,13 +115,13 @@ def smallest_int(number_list):
 
     """
     smallest = 100
-    empty_list = []
-    for number in number_list:
-        if number < smallest:
-            smallest = number
-        if len(number_list) == len(empty_list):
-            return []
-    return smallest
+    if len(number_list) == 0:
+        return None
+    else:
+        for number in number_list:
+            if number < smallest:
+                smallest = number
+        return smallest
 
 
 def largest_int(number_list):
@@ -137,12 +137,13 @@ def largest_int(number_list):
 
     """
     largest = 0
-    for number in number_list:
-        if number > largest:
-            largest = number
-        if len(number_list) == 0:
-            return None
-    return largest
+    if len(number_list) == 0:
+        return None
+    else:
+        for number in number_list:
+            if number > largest:
+                largest = number
+        return largest
 
 
 def halvesies(number_list):
